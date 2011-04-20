@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	padding: 20px 0;
+	text-align: left;
+	font: 1em/1.4em "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #000;
+	background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+
+h1 { 
+	font-size: 180%;
+	color: black;
+	margin-bottom: 2px;
+}
+
+h2 { 
+	font-size: 175%; 
+	margin-bottom: 5px;
+	border-bottom: 1px solid #eee;
+	padding: 0 0 2px 0;
+	color: #aaa;
+	text-align: center;
+	font-weight: normal;
+}
+
+h1 span.subtitle { 
+	font-size: 50%; 
+	color: #888;
+}
+
+
+h3 { 
+	font-size: 110%;
+	margin-bottom: 2px;
+	margin-top: 5px;
+	color: #8C0C42;
+}
+  
+h3.divider {
+	border-bottom: 1px solid #999;
+}
+  
+img { border: 0; }
+
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #8C0C42;
+	text-decoration: underline;
+}
+
+table td {
+	vertical-align: top;
+}
+
+label {
+	float: left;
+	clear: both;
+	font-weight: bold;
+	margin-right: 5px;
+}

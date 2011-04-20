@@ -1,0 +1,56 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/css/standard.css" />
+<body>
+<div class="header">Task list</div>
+<form name="task" method="get">
+	<div>
+		<label for="offer">Status</label>
+		: include base::select {name => "status", id => "status", value => $statuses, class => 'submit'};
+	</div>
+	<div>
+		<label for="offer">Queue</label>
+		: include base::select {name => "class_id", id => "class", value => $classes, class => 'submit'};
+	</div>
+	<table class="jobmachine" id="table1">
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Title
+			</th>
+			<th>
+				Parameters
+			</th>
+			<th>
+				Run After
+			</th>
+			<th>
+				Remove After
+			</th>
+			<th>
+				Created
+			</th>
+			<th>
+				Modified
+			</th>
+		</tr>
+		: for $tasks -> $task {
+		<tr class="row">
+			<td><a href="/task/<: $task.task_id :>"><: $task.task_id :></a></td>
+			<td><: $task.title :></td>
+			<td><: $task.parameters :></td>
+			<td><: $task.run_after :></td>
+			<td><: $task.remove_after :></td>
+			<td><: $task.created :></td>
+			<td><: $task.modified :></td>
+		</tr>
+		: }
+	</table>
+	<input type="submit" value="OK">
+</form>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script-->
+<script src="/js/jobmachine/list.js" type="text/javascript"></script>
+</html>

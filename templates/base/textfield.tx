@@ -1,0 +1,1 @@
+<input type="text" name="<: $name :>" value="<: $value :>" size="<: $size || 10 :>" id="<: $id || $name :>" class="<: $class || 'textfield' :>">

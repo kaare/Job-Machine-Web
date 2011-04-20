@@ -1,0 +1,29 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/css/standard.css" />
+<body>
+<div><label for="task_id">Task ID</label><span id="task_id"><: $task.task_id :></span></div>
+<div><label for="parameters">Parameters</label><span id="parameters"><: $task.parameters :></span></div>
+<div><label for="created">Created</label><span id="created"><: $task.created :></span></div>
+<div><label for="modified">Modified</label><span id="modified"><: $task.modified :></span></div>
+<table class="jobmachine" id="table1">
+	<tr>
+		<th>
+			Id
+		</th>
+		<th>
+			Result
+		</th>
+		<th>
+			Created
+		</th>
+	</tr>
+	: for $results -> $result {
+	<tr class="row">
+		<td><: $result.result_id :></td>
+		<td><: $result.result :></td>
+		<td><: $task.created :></td>
+	</tr>
+	: }
+</table>
+</body>
+</html>

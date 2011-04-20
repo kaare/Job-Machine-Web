@@ -1,0 +1,10 @@
+: cascade wrapper
+: override content -> {
+<form method="post">
+	<label for="username">User</label>
+	: include base::textfield {name => "username", value => $username};
+	<label for="password">Password</label>
+	: include base::password  {name => "password", value => $password};
+	<input type="submit" id="submit" name="submit" value="OK">
+</form>
+: }

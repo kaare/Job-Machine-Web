@@ -1,0 +1,5 @@
+<select name="<: $name :>" id="<: $id || $name :>" class="<: $class :>">
+: for $value -> $item {
+	<option <: if $item.selected { :>selected <: } :>value="<: $item.id :>"><: $item.name :></option>
+: }
+</select>
