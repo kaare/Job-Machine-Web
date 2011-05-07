@@ -39,7 +39,7 @@
 		<tr class="row">
 			<td><a href="/task/<: $task.task_id :>"><: $task.task_id :></a></td>
 			<td><: $task.title :></td>
-			<td><: $task.parameters :></td>
+			<td><pre><span class="json"><: $task.parameters :></span></pre></td>
 			<td><: $task.run_after :></td>
 			<td><: $task.remove_after :></td>
 			<td><: $task.created :></td>
